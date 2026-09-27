@@ -1,0 +1,89 @@
+# WeatherGPT 🌦️
+
+WeatherGPT is a conversational weather application designed to provide users with quick and easy access to weather information.
+
+## 🚀 Features
+
+- 🌡️ Temperature information
+- 💧 Humidity information
+- 🌤️ Weather conditions
+- 🚨 Weather alerts
+- 📍 Location-based weather search
+- 🎤 Voice input support
+- 🗣️ Hindi and English interaction
+- 💬 Conversational weather interface
+- 📱 Simple and user-friendly interface
+
+## 🎯 Project Objective
+
+The main objective of WeatherGPT is to make weather information easily accessible through a simple conversational interface.
+
+It can help users get weather information quickly for daily activities, farming, research, and weather-related decision making.
+
+## 🛠️ Technologies Used
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+
+### Backend
+- Python
+- FastAPI
+- Uvicorn
+
+### Weather Data
+- Open-Meteo API
+
+## 📁 Project Structure
+
+```text
+WeatherGPT/
+│
+├── weather_frontend/
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
+│
+├── weather_backend/
+│   ├── main.py
+│   └── requirements.txt
+│
+└── .gitignore
+
+
+
+⚙️ How to Run
+1. Clone the Repository
+git clone https://github.com/shubhanshiawasthi4-debug/WeatherGPT.git
+2. Open the Project
+Open the WeatherGPT folder in VS Code.
+3. Install Dependencies
+Open the terminal inside the weather_backend folder and run:
+pip install -r requirements.txt
+4. Start the Backend
+uvicorn main:app --reload --port 8000
+5. Run the Frontend
+Open:
+weather_frontend/index.html
+in a web browser.
+🌐 Weather Data Source
+Weather data is obtained using the Open-Meteo API.
+👥 Team
+WeatherGPT was developed as a team project for the Smart India Hackathon (SIH).
+Team Contributions
+Frontend & UI – Web interface and user interaction
+Backend & API – FastAPI backend and API integration
+Weather API – Weather data integration and testing
+Advisory Logic – Weather-based advisory rules
+Database – Data storage and logging
+🔮 Future Scope
+Improved conversational capabilities
+More detailed weather and climate analysis
+Advanced weather alerts
+Additional regional language support
+Enhanced weather advisories
+Improved visualization and dashboards
+📌 Project
+WeatherGPT – Conversational AI for Weather Forecasting, Alerts, and Climate Information
+Developed for Smart India Hackathon (SIH).
