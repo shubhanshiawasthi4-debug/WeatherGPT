@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WeatherGPT — Conversational Weather Intelligence</title>
+<meta name="description" content="WeatherGPT — an AI chatbot for weather forecasts, alerts and climate information, built for SIH26068 (Ministry of Earth Sciences).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Devanagari:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">WeatherGPT</span>
+    </div>
+    <div class="navbar-tag">SIH26068 &middot; Ministry of Earth Sciences</div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Space Technology Theme</p>
+    <h1 class="hero-title">Ask the sky a question.</h1>
+    <p class="hero-sub">
+      Real-time forecasts, extreme-weather alerts and climate insight —
+      in plain language, in the language you actually speak.
+    </p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">2</span>
+        <span class="stat-label">languages</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Live</span>
+        <span class="stat-label">forecast data</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Voice</span>
+        <span class="stat-label">enabled</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="chat-section">
+  <div class="chat-wrap">
+
+    <div class="chat-toolbar">
+      <div class="lang-toggle" role="group" aria-label="Choose language">
+        <button data-lang="en" class="active" type="button">English</button>
+        <button data-lang="hi" type="button">हिन्दी</button>
+      </div>
+      <div class="status" id="statusPill">
+        <span class="dot" id="statusDot"></span>
+        <span id="statusText">Checking backend…</span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="messages" id="messages"></div>
+
+      <form class="composer" id="composerForm">
+        <button type="button" class="icon-btn mic" id="micBtn" title="Voice input" aria-label="Voice input">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#132234" stroke-width="2" stroke-linecap="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        </button>
+        <input id="msgInput" type="text" placeholder="e.g. Will it rain in Lucknow tomorrow?" autocomplete="off" />
+        <button type="submit" class="icon-btn send" id="sendBtn" title="Send" aria-label="Send message">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <p class="hint">Backend expected at <code id="apiUrlLabel">http://localhost:8000/chat</code> — edit <code>API_URL</code> in <code>script.js</code> if hosted elsewhere.</p>
+  </div>
+</main>
+
+<section class="features">
+  <div class="features-inner">
+    <div class="feature">
+      <h3>Real-time forecasts</h3>
+      <p>Live temperature, rain probability and wind data for any place, fetched on every question.</p>
+    </div>
+    <div class="feature">
+      <h3>Extreme weather alerts</h3>
+      <p>Automatic flags for heavy rain, high wind, heatwave and cold-wave conditions.</p>
+    </div>
+    <div class="feature">
+      <h3>Multilingual &amp; voice</h3>
+      <p>Ask in English or Hindi, by typing or speaking — built for accessibility in rural areas.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>Prototype for SIH26068 · WeatherGPT · Weather data via Open-Meteo</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
